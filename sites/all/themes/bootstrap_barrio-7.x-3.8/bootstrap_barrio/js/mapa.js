@@ -2,8 +2,8 @@ window.onload = function () {
 
             var R = Raphael("mapa-bogota", 650, 300);
             var attr = {
-                fill: "#A7A7A7",
-                stroke: "#999",
+                fill: "#DE5766",
+                stroke: "none",
                 "stroke-width": 1,
                 "stroke-linejoin": "round"
             };
@@ -51,5 +51,21 @@ window.onload = function () {
             // Se utiliza un metodo deprecado, metodo transform no funciono segun lo esperado
             mapa.rotate(-90,cx,cy);
             mapa.translate(30,260);
+            
+            // Inicia la animación
+
+            colorDefault = "#df5766";
+            
+            function entra () {
+                this.stop().animate({'fill': '#fdffff'}, 500, function (){
+                    console.log("Contenido");
+                });
+            }
+
+            function sale () {
+                this.stop().animate({'fill': colorDefault}, 500);
+            }
+
+            mapa.hover(entra,sale);
 
 }
