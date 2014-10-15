@@ -448,3 +448,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 #block-search-form{
 	height: 60px;
 }
+
+/* ------------- MAPA -------------- */
+.mapa-container-bg {
+    background: #3d1e4d;
+}
+
+#mapa-bogota svg {
+    position:absolute;
+    top:0;
+    left:0;
+}
+

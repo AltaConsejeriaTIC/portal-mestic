@@ -1,6 +1,6 @@
 window.onload = function () {
 
-            var R = Raphael("mapa_bogota", 400, 300);
+            var R = Raphael("mapa-bogota", 650, 300);
             var attr = {
                 fill: "#A7A7A7",
                 stroke: "#999",
@@ -50,5 +50,6 @@ window.onload = function () {
 
             // Se utiliza un metodo deprecado, metodo transform no funciono segun lo esperado
             mapa.rotate(-90,cx,cy);
+            mapa.translate(30,260);
 
 }
