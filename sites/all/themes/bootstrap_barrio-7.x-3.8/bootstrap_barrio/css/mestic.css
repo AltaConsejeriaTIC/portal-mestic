@@ -451,7 +451,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* ------------- MAPA -------------- */
 .mapa-container-bg {
-    background: #3d1e4d;
+    background-image: url('/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/ciudad-bg.png');
+    background-color: #3d1e4d;
+    background-repeat: repeat-x;
+    background-position: 0 120px;
 }
 
 #mapa-bogota svg {
@@ -463,4 +466,3 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 #mapa-bogota-actividades {
     color: white;
 }
-
