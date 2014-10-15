@@ -1,5 +1,7 @@
 window.onload = function () {
 
+            var $ = jQuery;
+
             var R = Raphael("mapa-bogota", 650, 300);
             var attr = {
                 fill: "#DE5766",
@@ -55,10 +57,21 @@ window.onload = function () {
             // Inicia la animación
 
             colorDefault = "#df5766";
+
+            colorLocalidad = {}
+            colorLocalidad.chapinero = "#EDF108"
+            colorLocalidad.teusaquillo = "#3f5d4d"
+            colorLocalidad.santafe = "#4f5d6a"
+            colorLocalidad.losmartires = "#f4f3f2"
+            colorLocalidad.lacandelaria = "#323232"
+            colorLocalidad.ciudadbolivar = "#4a4a4a"
+            colorLocalidad.bosa = "#1f1f1f"
             
             function entra () {
-                this.stop().animate({'fill': '#fdffff'}, 500, function (){
-                    console.log("Contenido");
+                localidad = Object.keys(bog)[this.id];
+                color = $.isEmptyObject(colorLocalidad[localidad]) ? "#3d3d3d" : colorLocalidad[localidad];
+                this.stop().animate({'fill': color}, 500, function (){
+                    $("#mapa-bogota-actividades").empty().append("<div>"+localidad+"</div>")
                 });
             }
 
