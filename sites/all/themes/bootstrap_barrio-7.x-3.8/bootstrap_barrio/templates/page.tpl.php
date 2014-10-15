@@ -248,7 +248,6 @@
             <?php print render($page['mapa_bogota']); ?>
           </div>
           <div id="mapa-bogota-actividades" class="col-md-4">
-            Aca van las Actividades
           </div>
         <?php endif; ?>
 
