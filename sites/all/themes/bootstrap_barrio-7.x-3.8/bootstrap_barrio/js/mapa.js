@@ -66,6 +66,16 @@ window.onload = function () {
             colorLocalidad.lacandelaria = "#323232"
             colorLocalidad.ciudadbolivar = "#4a4a4a"
             colorLocalidad.bosa = "#1f1f1f"
+
+            showEffect = Raphael.animation({'opacity': '1'}, 500);
+            hideEffect = Raphael.animation({'opacity': '0'}, 500);
+
+            var co = R.circle(0,0,50).attr({'opacity': '0', 'fill':'#ffffff'});
+
+            var callout = function(el, posx, posy, anim) {
+                el.attr({'cx': posx, 'cy': posy})
+                return el.animate(anim);
+            }
             
             function entra () {
                 localidad = Object.keys(bog)[this.id];
@@ -73,12 +83,21 @@ window.onload = function () {
                 this.stop().animate({'fill': color}, 500, function (){
                     $("#mapa-bogota-actividades").empty().append("<div>"+localidad+"</div>")
                 });
+
+                // Se emplean variables globales para ser utlizadas 
+                // en el evento de salida del mouse
+                cx = (this.getBBox().x) - 35;
+                cy = (this.getBBox().y) - 35;
+
+                callout(co, cx, cy, showEffect);
             }
 
             function sale () {
                 this.stop().animate({'fill': colorDefault}, 500);
+                callout(co,cx,cy,hideEffect);
             }
 
-            mapa.hover(entra,sale);
+            mapa.mouseover(entra);
+            mapa.mouseout(sale);
 
 }
