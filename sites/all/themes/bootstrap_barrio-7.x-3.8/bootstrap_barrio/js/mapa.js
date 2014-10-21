@@ -70,11 +70,28 @@ window.onload = function () {
             showEffect = Raphael.animation({'opacity': '1'}, 500);
             hideEffect = Raphael.animation({'opacity': '0'}, 500);
 
-            var co = R.circle(0,0,50).attr({'opacity': '0', 'fill':'#ffffff'});
+            var circulo = R.circle(0,0,50).attr({'opacity': '0', 'fill':'#ffffff', 'stroke-width':'2'}).toFront();
 
-            var callout = function(el, posx, posy, anim) {
+            obj = R.set();
+            obj.push(circulo);
+
+            var callout = function(loc, el, posx, posy, anim) {
+
                 el.attr({'cx': posx, 'cy': posy})
-                return el.animate(anim);
+
+                // Calcula el centro de la localidad
+                locx1 = loc.getBBox().x;
+                locy1 = loc.getBBox().y;
+                locx2 = loc.getBBox().x2;
+                locy2 = loc.getBBox().y2;
+
+                cxi = (locx1 + locx2)/2
+                cyi = (locy1 + locy2)/2
+
+                connector = R.path("M"+cxi+","+cyi+"L"+posx+","+posy).attr({'stroke-width':'2', 'stroke':'#ffffff', 'stroke-dasharray':"-", 'opacity':'0'});
+                obj.push(connector);
+
+                return obj.animate(anim);
             }
             
             function entra () {
@@ -89,12 +106,13 @@ window.onload = function () {
                 cx = (this.getBBox().x) - 35;
                 cy = (this.getBBox().y) - 35;
 
-                callout(co, cx, cy, showEffect);
+                callout(this, obj, cx, cy, showEffect);
+
             }
 
             function sale () {
                 this.stop().animate({'fill': colorDefault}, 500);
-                callout(co,cx,cy,hideEffect);
+                callout(this, obj, cx, cy, hideEffect);
             }
 
             mapa.mouseover(entra);
