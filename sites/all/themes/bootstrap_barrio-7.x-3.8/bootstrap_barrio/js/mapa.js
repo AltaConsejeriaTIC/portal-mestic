@@ -47,11 +47,11 @@ window.onload = function () {
                 y   = mapa.getBBox().y,
                 y2  = mapa.getBBox().y2;
 
-            var cx = (x+x2)/2,
-                cy = (y+y2)/2;
+            var mx = (x+x2)/2,
+                my = (y+y2)/2;
 
             // Se utiliza un metodo deprecado, metodo transform no funciono segun lo esperado
-            mapa.rotate(-90,cx,cy);
+            mapa.rotate(-90,mx,my);
             mapa.translate(30,260);
             
             // Inicia la animación
