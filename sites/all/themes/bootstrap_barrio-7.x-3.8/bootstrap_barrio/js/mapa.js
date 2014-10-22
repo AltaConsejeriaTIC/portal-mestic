@@ -67,17 +67,23 @@ window.onload = function () {
             colorLocalidad.ciudadbolivar = "#4a4a4a"
             colorLocalidad.bosa = "#1f1f1f"
 
-            showEffect = Raphael.animation({'opacity': '1'}, 500);
-            hideEffect = Raphael.animation({'opacity': '0'}, 500);
+            showEffect = Raphael.animation({'opacity': '1'}, 50);
+            hideEffect = Raphael.animation({'opacity': '0'}, 50);
 
-            var circulo = R.circle(0,0,50).attr({'opacity': '0', 'fill':'#ffffff', 'stroke-width':'2'}).toFront();
 
             obj = R.set();
-            obj.push(circulo);
 
             var callout = function(loc, el, posx, posy, anim) {
 
+                // Reinicia el set de elementos del callout
+                obj.remove();
+
+                // Inicializa los elementos del callout para la 
+                // localidad seleccionada
+                var circulo = R.circle(0,0,50).attr({'opacity': '0', 'fill':'#ffffff', 'stroke-width':'2'}).toFront();
+                obj.push(circulo);
                 el.attr({'cx': posx, 'cy': posy})
+
 
                 // Calcula el centro de la localidad
                 locx1 = loc.getBBox().x;
@@ -88,7 +94,10 @@ window.onload = function () {
                 cxi = (locx1 + locx2)/2
                 cyi = (locy1 + locy2)/2
 
-                connector = R.path("M"+cxi+","+cyi+"L"+posx+","+posy).attr({'stroke-width':'2', 'stroke':'#ffffff', 'stroke-dasharray':"-", 'opacity':'0'});
+                var puntoInicial = R.circle(cxi,cyi,5).attr({'opacity': '0', 'fill':'#ffffff', 'stroke':'#ffffff;'}).toFront();
+                obj.push(puntoInicial);
+
+                var connector = R.path("M"+cxi+","+cyi+"L"+posx+","+posy).attr({'stroke-width':'2', 'stroke':'#ffffff', 'stroke-dasharray':"-", 'opacity':'0'});
                 obj.push(connector);
 
                 return obj.animate(anim);
