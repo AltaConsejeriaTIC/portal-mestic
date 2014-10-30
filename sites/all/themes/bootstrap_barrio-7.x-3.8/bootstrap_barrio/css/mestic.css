@@ -82,12 +82,12 @@ div.view-ultimas-noticias div.view-content table.views-view-grid tr td {
 	z-index: 10001;
 }
 #f{
-	background:url("/mestic/sites/default/files/u13/parte19.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte19.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	background-size: 34px 31px;	
 }
 ul.nav-tabs li.active a span#f:hover,
 ul.nav-tabs li.active a span#f{
-	background:url("/mestic/sites/default/files/u13/parte18.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte18.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	background-size: 34px 31px;
 }
 
@@ -101,12 +101,12 @@ ul.nav-tabs li.active a span#f{
 	background-color:#3d1e4d;
 }
 #fr{
-	background:url("/mestic/sites/default/files/u13/parte25.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte25.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	background-size: 34px 31px;	
 }
 ul.nav-tabs li.active a span#fr:hover, 
 ul.nav-tabs li.active a span#fr{
-	background:url("/mestic/sites/default/files/u13/parte24.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte24.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	background-size: 34px 31px;
 }
 #main-nav a{
@@ -126,21 +126,21 @@ ul.nav-tabs li.active a span#fr{
 	 height: 40px;
 }
 #t{
-	background:url("/mestic/sites/default/files/u13/parte21.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte21.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	background-size: 34px 31px;	
 }
 ul.nav-tabs li.active a span#t:hover,
 ul.nav-tabs li.active a span#t{
-	background:url("/mestic/sites/default/files/u13/parte20.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte20.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	background-size: 34px 31px;
 }
 #y{
-	background:url("http://rastalejo.url.ph/mestic/sites/default/files/u13/parte23.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte23.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	background-size: 34px 31px;	
 }
 ul.nav-tabs li.active a span#y:hover,
 ul.nav-tabs li.active a span#y{
-	background:url("/mestic/sites/default/files/u13/parte22.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte22.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	background-size: 34px 31px;
 }
 .front .main-container {
@@ -171,7 +171,7 @@ ul.nav-tabs li.active a span#y{
 }
 
 footer.footer { 
-	background: url("/mestic/sites/default/files/u13/footer_f.png") repeat-x;
+	background: url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/footer_f.png") repeat-x;
 	background-size: 1154px 200px;
 	background-position:bottom;
 	height:300px;
@@ -240,7 +240,7 @@ footer.footer {
 }
 
 .panoramico{
-  	background: url("/mestic/sites/default/files/u13/panoramica.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  	background: url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/panoramica.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	background-size: 100% 100%;
     	height: 420px;
     	margin: 0;
@@ -353,7 +353,7 @@ table.views-view-grid {
 .views-field-view-node span:hover,
 .views-field-view-node-1 span:focus,
 .views-field-view-node span:focus{
-	 background: url("/mestic/sites/default/files/u13/Sin título-1.gif") no-repeat scroll right center rgba(0, 0, 0, 0);
+	 background: url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/Sin título-1.gif") no-repeat scroll right center rgba(0, 0, 0, 0);
     	/*bottom: 30px;*/
     	display: block;
     	float: right;
@@ -364,7 +364,7 @@ table.views-view-grid {
 
 .views-field-view-node-1 span,
 .views-field-view-node span{
-	 background: url("/mestic/sites/default/files/u13/Sin%20titulo%202.gif") no-repeat scroll right center rgba(0, 0, 0, 0);
+	 background: url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/Sin%20titulo%202.gif") no-repeat scroll right center rgba(0, 0, 0, 0);
     /*	bottom: 30px;*/
     	display: block;
     	float: right;
