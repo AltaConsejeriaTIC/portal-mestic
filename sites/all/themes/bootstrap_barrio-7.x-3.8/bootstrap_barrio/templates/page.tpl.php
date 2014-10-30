@@ -239,18 +239,23 @@
 
 </div>
 
+<div class="mapa-container-bg">
+    <div class="container">
+        <div id="mapa-container" class="row">
 
-<div id="mapa_bogota" class="row">
+        <?php if (!empty($page['mapa_bogota'])): ?>
+          <div id="mapa-bogota" class="col-md-8">
+            <?php print render($page['mapa_bogota']); ?>
+          </div>
+          <div id="mapa-bogota-actividades" class="col-md-4">
+          </div>
+        <?php endif; ?>
 
-<?php if (!empty($page['mapa_bogota'])): ?>
-  <div id="mapa-bogota" class="col-md-12">
-    <?php print render($page['mapa_bogota']); ?>
-  </div>
-<?php endif; ?>
-
+        </div>
+    </div>
 </div>
 
-<div class="main-container container">
+<div class="container">
 <div class="row">
 
 
