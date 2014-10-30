@@ -107,6 +107,15 @@ window.onload = function () {
                 localidad = Object.keys(bog)[this.id];
                 color = $.isEmptyObject(colorLocalidad[localidad]) ? "#3d3d3d" : colorLocalidad[localidad];
                 this.stop().animate({'fill': color}, 500, function (){
+
+                    // Obtener los datos de la localidad via ajax
+
+                    $.ajax({
+                        url: "http://mesticbogota.dev/?q=node/82.json",
+                        dataType: "json"
+                    }).done(function (data){
+                    })
+
                     $("#mapa-bogota-actividades").empty().append("<div>"+localidad+"</div>")
                 });
 
