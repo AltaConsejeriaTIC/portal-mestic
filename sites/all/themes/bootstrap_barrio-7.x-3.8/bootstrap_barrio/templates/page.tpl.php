@@ -254,6 +254,15 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="row">
+        <?php if (!empty($page['eventos-destacados'])): ?>
+            <div id="noticias-mes-tic" class="col-md-12 ">
+                <?php print render($page['eventos-destacados']);?>
+            </div>
+        <?php endif; ?>       
+    </div>
+</div>
 
 <div class="container">
 <div class="row">
