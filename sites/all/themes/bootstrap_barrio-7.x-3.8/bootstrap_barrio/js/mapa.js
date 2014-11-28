@@ -112,10 +112,15 @@ window.onload = function () {
                 color = $.isEmptyObject(colorLocalidad[localidad]) ? "#3d3d3d" : colorLocalidad[localidad];
                 this.stop().animate({'fill': color}, 500, function (){
 
+                    // Obtener los datos del nombre del servidor
+                    var protocol = window.location.protocol;
+                    var host = window.location.hostname;
+
+                    url = protocol+"//"+host+"/?q="+localidad+".json";
                     // Obtener los datos de la localidad via ajax
 
                     $.ajax({
-                        url: "http://mesticbogota.dev/?q=node/82.json",
+                        url: url,
                         dataType: "json"
                     }).done(function (data){
                     })
