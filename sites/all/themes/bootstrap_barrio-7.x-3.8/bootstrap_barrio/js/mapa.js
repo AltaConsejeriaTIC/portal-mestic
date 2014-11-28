@@ -2,7 +2,11 @@ window.onload = function () {
 
             var $ = jQuery;
 
-            var R = Raphael("mapa-bogota", 650, 300);
+            // Usa jQuery para definir el selector donde se ubicará el mapa 
+            // según la estructura del bloque
+            canvas = $("#mapa-container .block-content");
+
+            var R = Raphael(canvas[0], 650, 300);
             var attr = {
                 fill: "#DE5766",
                 stroke: "none",

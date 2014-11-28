@@ -448,6 +448,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 #block-search-form{
 	height: 60px;
 }
+
+/*------- Mapa interactivo de Bogotá--------*/
+.mapa-container-bg {
+    background-color: #3D1E4D;
+}
+
 /*-------------- eje noticias --------------*/
 .eje-noticia{
 	padding-top:15px;
