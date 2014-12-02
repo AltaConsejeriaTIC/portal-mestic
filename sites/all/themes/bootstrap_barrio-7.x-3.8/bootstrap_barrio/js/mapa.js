@@ -116,16 +116,24 @@ window.onload = function () {
                     var protocol = window.location.protocol;
                     var host = window.location.hostname;
 
-                    url = protocol+"//"+host+"/?q="+localidad+".json";
+                    url = protocol+"//"+host+"/?q=data/"+localidad+".json";
                     // Obtener los datos de la localidad via ajax
 
                     $.ajax({
                         url: url,
                         dataType: "json"
                     }).done(function (data){
+                        for (item in data) {
+                            var contenedor = $("#mapa-bogota-actividades");
+                            var titulo = data[item].node_title;
+                            var contenido = data[item].body;
+
+                            contenedor.empty();
+                            contenedor.append("<h4>"+titulo+"</h4>");
+                            contenedor.append("<div>"+contenido+"</div>");
+                        }
                     })
 
-                    $("#mapa-bogota-actividades").empty().append("<div>"+localidad+"</div>")
                 });
 
                 // Se emplean variables globales para ser utlizadas 
