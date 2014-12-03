@@ -106,33 +106,66 @@ window.onload = function () {
 
                 return obj.animate(anim);
             }
+
+            // Obtener los datos del nombre del servidor
+            var protocol = window.location.protocol;
+            var host = window.location.hostname;
+
+
+            /** 
+             * getLocalidades
+             *
+             * El propósito de esta función es obtener los datos del recurso 
+             * localidades via ajax proporcionado por el servidor rest de Drupal
+             *
+             * @param {string} host - hostname empleado en la petición
+             * @param {string} protocol - protocolo empleado en la petición
+             * @param {string} filter - nombre de la localidad. default: localidades
+             * @param {string} type - formato en que se desea recibir la data. default: json
+             */
+            function getLocalidades (host, protocol, filter, type) {
+
+                // define valores default;
+                var filter = typeof filter !== "undefined" ? filter : "localidades";
+                var type = typeof type !== "undefined" ? type : "json";
+
+                // compone la url para acceder al recurso
+                var url = protocol+"//"+host+"/?q=data/"+filter+"."+type;
+
+                // inicia la petición ajax usando jQuery
+                $.ajax({
+                    url: url,
+                    dataType: type
+                }).done(function (data) {
+                    var contenedor = $("#mapa-bogota-actividades");
+                    contenedor.empty();
+
+                    for (item in data) {
+                        var titulo = data[item].titulo;
+                        var link = "/?q=node/"+data[item].nid;
+                        var localidad = data[item]["localidad-nombre"];
+                        var eje = data[item]["eje-enlace"];
+                        var imagen = data[item].imagen;
+                        var contenido = data[item].cuerpo;
+
+                        contenedor.append("<h5><a href="+link+">"+titulo+"</a></h5>");
+                        contenedor.append("<span>"+eje+"</span>");
+                        if(image.length !== 0) contenedor.append(imagen);
+                        contenedor.append(contenido);
+                    }
+                });
+            }
+
+            // Obtener los datos de la localidad
+            getLocalidades(host, protocol);
             
             function entra () {
                 localidad = Object.keys(bog)[this.id];
                 color = $.isEmptyObject(colorLocalidad[localidad]) ? "#3d3d3d" : colorLocalidad[localidad];
                 this.stop().animate({'fill': color}, 500, function (){
 
-                    // Obtener los datos del nombre del servidor
-                    var protocol = window.location.protocol;
-                    var host = window.location.hostname;
-
-                    url = protocol+"//"+host+"/?q=data/"+localidad+".json";
-                    // Obtener los datos de la localidad via ajax
-
-                    $.ajax({
-                        url: url,
-                        dataType: "json"
-                    }).done(function (data){
-                        for (item in data) {
-                            var contenedor = $("#mapa-bogota-actividades");
-                            var titulo = data[item].node_title;
-                            var contenido = data[item].body;
-
-                            contenedor.empty();
-                            contenedor.append("<h4>"+titulo+"</h4>");
-                            contenedor.append("<div>"+contenido+"</div>");
-                        }
-                    })
+                    // Obtener los datos de la localidad
+                    getLocalidades(host,protocol,localidad);
 
                 });
 

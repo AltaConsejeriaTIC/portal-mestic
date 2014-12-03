@@ -461,6 +461,20 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     background-color: #3D1E4D;
 }
 
+#mapa-bogota-actividades {
+    color: #FFFFFF;
+}
+
+#mapa-bogota-actividades h5 {
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+#mapa-bogota-actividades p {
+    color: #FFFFFF;
+    font-size: 0.8em;
+}
+
 /*-------------- eje noticias --------------*/
 .eje-noticia{
 	padding-top:15px;
