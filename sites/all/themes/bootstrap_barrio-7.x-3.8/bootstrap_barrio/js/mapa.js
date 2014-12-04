@@ -148,10 +148,16 @@ window.onload = function () {
                         var imagen = data[item].imagen;
                         var contenido = data[item].cuerpo;
 
-                        contenedor.append("<h5><a href="+link+">"+titulo+"</a></h5>");
-                        contenedor.append("<span>"+eje+"</span>");
+                        contenedor
+                            .append($("<h5></h5>")
+                            .append($("<a></a>").html(titulo)).addClass("titulo"))
+                            .append($("<div></div>").html(eje).addClass("eje"));
+
                         if(imagen.length !== 0) contenedor.append(imagen);
-                        contenedor.append(contenido);
+
+                        contenedor
+                            .append(contenido)
+                            .append($("<div></div>").addClass("clearfix"));
                     }
                 });
             }

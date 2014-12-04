@@ -463,6 +463,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 #mapa-bogota-actividades {
     color: #FFFFFF;
+    height: 375px;
+    overflow-y: scroll;
 }
 
 #mapa-bogota-actividades h5 {
@@ -473,6 +475,21 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 #mapa-bogota-actividades p {
     color: #FFFFFF;
     font-size: 0.8em;
+}
+
+#mapa-bogota-actividades img {
+    float: left;
+    margin: 3px 3px 3px 0;
+    height: auto;
+    width: 100px;
+}
+
+#mapa-bogota-actividades .eje {
+    height: auto;
+    background: none;
+    line-height: 1em;
+    text-align: left;
+    padding: 3px;
 }
 
 /*-------------- eje noticias --------------*/
