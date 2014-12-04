@@ -141,6 +141,9 @@ window.onload = function () {
                     contenedor.empty();
 
                     for (item in data) {
+                        // elemento que contiene la información de la acividad
+                        var actividad = $("<div></div>").addClass("actividad");
+
                         var titulo = data[item].titulo;
                         var link = "/?q=node/"+data[item].nid;
                         var localidad = data[item]["localidad-nombre"];
@@ -148,16 +151,18 @@ window.onload = function () {
                         var imagen = data[item].imagen;
                         var contenido = data[item].cuerpo;
 
-                        contenedor
+                        actividad 
                             .append($("<h5></h5>")
                             .append($("<a></a>").html(titulo)).addClass("titulo"))
                             .append($("<div></div>").html(eje).addClass("eje"));
 
-                        if(imagen.length !== 0) contenedor.append(imagen);
+                        if(imagen.length !== 0) actividad.append(imagen);
 
-                        contenedor
+                        actividad 
                             .append(contenido)
                             .append($("<div></div>").addClass("clearfix"));
+
+                        contenedor.append(actividad);
                     }
                 });
             }
