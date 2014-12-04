@@ -150,7 +150,7 @@ window.onload = function () {
 
                         contenedor.append("<h5><a href="+link+">"+titulo+"</a></h5>");
                         contenedor.append("<span>"+eje+"</span>");
-                        if(image.length !== 0) contenedor.append(imagen);
+                        if(imagen.length !== 0) contenedor.append(imagen);
                         contenedor.append(contenido);
                     }
                 });
