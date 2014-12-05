@@ -203,7 +203,7 @@ window.onload = function () {
             
             function entra () {
                 var localidad = Object.keys(bog)[this.id];
-                var color = setLocalidadColor(coloLocalidad, localidad);
+                var color = setLocalidadColor(colorLocalidad, localidad);
                 console.log(color);
                 this.stop().animate({'fill': color}, 500, function (){
 
