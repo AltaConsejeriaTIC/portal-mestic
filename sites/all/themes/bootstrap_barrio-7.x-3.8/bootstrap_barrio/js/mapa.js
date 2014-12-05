@@ -58,10 +58,7 @@ window.onload = function () {
             mapa.rotate(-90,mx,my);
             mapa.translate(30,260);
             
-            // Inicia la animación
-
-            colorDefault = "#df5766";
-
+            // set de colores para localidades 
             colorLocalidad = {}
             colorLocalidad.none = "#3b3b3b"
             colorLocalidad.chapinero = "#EDF108"
@@ -225,7 +222,7 @@ window.onload = function () {
             }
 
             function sale () {
-                this.stop().animate({'fill': colorDefault}, 500);
+                this.stop().animate({'fill': colorLocalidad.none}, 500);
                 callout(this, obj, cx, cy, hideEffect);
             }
 
