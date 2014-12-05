@@ -63,6 +63,7 @@ window.onload = function () {
             colorDefault = "#df5766";
 
             colorLocalidad = {}
+            colorLocalidad.none = "#3b3b3b"
             colorLocalidad.chapinero = "#EDF108"
             colorLocalidad.teusaquillo = "#3f5d4d"
             colorLocalidad.santafe = "#4f5d6a"
@@ -71,9 +72,31 @@ window.onload = function () {
             colorLocalidad.ciudadbolivar = "#4a4a4a"
             colorLocalidad.bosa = "#1f1f1f"
 
+            /** 
+             * setLocalidadColor
+             *
+             * El proposito de esta función es determinar el color
+             * identificador de la localidad
+             *
+             * @param   {object}    colorSet    - set de datos con las localidades y valores HEX de color
+             * @param   {string}    localidad   - nombre de la localidad
+             * @default {string}    hex         - #3D3D3D
+             * @return  {string}    hex         - valor HEX de color
+             *       
+             */
+            function setLocalidadColor (colorSet, localidad) {
+                console.log("ENTRA", localidad) 
+                localidad = localidad.toLowerCase() || 'none';
+                console.log("EXISTE", localidad);
+
+                // realiza una transformación al valor entregado de localidad
+                var hex = $.isEmptyObject(colorSet[localidad]) ? "#3d3d3d" : colorSet[localidad];
+                return hex;
+                
+            }
+
             showEffect = Raphael.animation({'opacity': '1'}, 50);
             hideEffect = Raphael.animation({'opacity': '0'}, 50);
-
 
             obj = R.set();
 
@@ -161,6 +184,17 @@ window.onload = function () {
                         actividad 
                             .append(contenido)
                             .append($("<div></div>").addClass("clearfix"));
+                    
+                        var color = setLocalidadColor(colorLocalidad, localidad);
+                        console.log(color);
+
+                        actividad
+                            .css({
+                                "border-left-color": color,
+                                "border-left-width": "3px",
+                                "border-left-style": "solid",
+                                "padding-left": "3px"
+                            })
 
                         contenedor.append(actividad);
                     }
@@ -171,8 +205,9 @@ window.onload = function () {
             getLocalidades(host, protocol);
             
             function entra () {
-                localidad = Object.keys(bog)[this.id];
-                color = $.isEmptyObject(colorLocalidad[localidad]) ? "#3d3d3d" : colorLocalidad[localidad];
+                var localidad = Object.keys(bog)[this.id];
+                var color = setLocalidadColor(coloLocalidad, localidad);
+                console.log(color);
                 this.stop().animate({'fill': color}, 500, function (){
 
                     // Obtener los datos de la localidad
