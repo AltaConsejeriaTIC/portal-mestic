@@ -233,9 +233,8 @@ window.onload = function () {
             getLocalidades(host, protocol);
             
             function entra () {
-                var localidad = Object.keys(bog)[this.id];
-                var color = setLocalidadColor(colorLocalidad, localidad);
-                console.log(color);
+                var localidad = this.data("nombre");
+                var color = setLocalidadColor(bog, localidad);
                 this.stop().animate({'fill': color}, 500, function (){
 
                     // Obtener los datos de la localidad
