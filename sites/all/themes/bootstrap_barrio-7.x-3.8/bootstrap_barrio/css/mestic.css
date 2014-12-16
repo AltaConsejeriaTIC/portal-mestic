@@ -472,9 +472,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-size: 1em;
 }
 
-#mapa-bogota-actividades p {
+#mapa-bogota-actividades p, 
+#mapa-bogota-actividades li, 
+#mapa-bogota-actividades em 
+{
     color: #FFFFFF;
-    font-size: 0.8em;
+    font-size: 11px;
+    line-height: 1.2em;
 }
 
 #mapa-bogota-actividades img {
