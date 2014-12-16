@@ -16,7 +16,7 @@ window.onload = function () {
             // El objeto sólamente contiene el string del path 
             // de cada localidad apra facilitar la manipulación posterior
             bog = {};
-            bog["none"] = {"color":"#FFFFFF"}
+            bog["none"] = {"color":"#DE5766"}
             bog["Usaquén"] = {"path":"M162.656,119.749c-2.614-38.617-5.201-77.211-7.815-115.823c5.422-1.171,10.823-2.338,16.245-3.509c1.217,0.74,2.454,1.455,3.671,2.198c0.746,2.801,1.521,5.619,2.264,8.418c-0.798,1.941-1.603,3.857-2.399,5.798c5.096-1.092,10.172-2.178,15.246-3.263c1.014,0.794,2.017,1.564,3.023,2.36c0.693-0.075,1.378-0.119,2.047-0.186c0.367,1.475,0.734,2.955,1.098,4.404c-1.37,0.34-2.74,0.682-4.108,1.02c0.729,1.563,1.479,3.091,2.21,4.627c-1.408,1.769-2.824,3.512-4.233,5.279c0.44,2.979,0.863,5.958,1.286,8.962c1.156-0.809,2.29-1.61,3.446-2.396c2.519,1.612,5.063,3.221,7.587,4.856c-0.392,1.117-0.75,2.25-1.131,3.392c-1.973,0.49-3.965,0.983-5.938,1.476c0.244,0.981,0.489,1.969,0.732,2.952c2.721-0.153,5.443-0.307,8.161-0.458c0.775,3.715,1.526,7.434,2.297,11.123c-2.496,0.472-4.999,0.92-7.495,1.364c-0.195,3.978-0.371,7.929-0.541,11.901c-0.405,1.647-0.807,3.312-1.232,4.962c0.677,3.115,1.324,6.238,1.977,9.359c1.49,0.155,3.007,0.3,4.498,0.451c0.352,1.406,0.699,2.813,1.051,4.243c-1.741,0.905-3.514,1.817-5.259,2.723c1.403,7.14,2.823,14.256,4.252,21.386c-2.284,0.52-4.573,1.038-6.835,1.55c0.148,1.682,0.285,3.337,0.43,4.994c-0.813,1.892-1.623,3.785-2.434,5.68c-1.172-0.057-2.34-0.117-3.516-0.174c-0.548-2.003-1.109-3.977-1.675-5.954c-1.446-0.96-2.92-1.937-4.386-2.891c-3.399,0.995-6.816,2.016-10.215,3.01c-0.582-0.256-1.137-0.515-1.721-0.768C169.713,121.778,166.184,120.764,162.656,119.749",
                 "activo": false,
                 "color":"#DE5766"};
@@ -234,26 +234,30 @@ window.onload = function () {
             
             function entra () {
                 var localidad = this.data("nombre");
-                var color = setLocalidadColor(bog, localidad);
-                this.stop().animate({'fill': color}, 500, function (){
+                if(bog[localidad]["activo"]) {
+                    this.stop().animate({'stroke': "#ffffff"}, 500, function (){
 
-                    // Obtener los datos de la localidad
-                    getLocalidades(host,protocol,localidad);
+                        // Obtener los datos de la localidad
+                        getLocalidades(host,protocol,localidad);
 
-                });
+                    });
 
-                // Se emplean variables globales para ser utlizadas 
-                // en el evento de salida del mouse
-                cx = (this.getBBox().x) - 35;
-                cy = (this.getBBox().y) - 35;
+                    // Se emplean variables globales para ser utlizadas 
+                    // en el evento de salida del mouse
+                    cx = (this.getBBox().x) - 35;
+                    cy = (this.getBBox().y) - 35;
 
-                callout(this, obj, cx, cy, showEffect);
+                    callout(this, obj, cx, cy, showEffect);
+                }
 
             }
 
             function sale () {
-                this.stop().animate({'fill': colorLocalidad.none}, 500);
-                callout(this, obj, cx, cy, hideEffect);
+                var localidad = this.data("nombre");
+                if(bog[localidad]["activo"]) {
+                    this.stop().animate({'stroke': bog[localidad]["color"]}, 500);
+                    callout(this, obj, cx, cy, hideEffect);
+                }
             }
 
             mapa.mouseover(entra);
