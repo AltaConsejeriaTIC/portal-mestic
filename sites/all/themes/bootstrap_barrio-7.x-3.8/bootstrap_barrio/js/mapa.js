@@ -13,7 +13,7 @@ window.onload = function () {
                 "stroke-linejoin": "round"
             };
 
-            // El objeto sólamente contiene el string del path i
+            // El objeto sólamente contiene el string del path 
             // de cada localidad apra facilitar la manipulación posterior
             bog = {};
             bog["none"] = {"color":"#FFFFFF"}
@@ -101,18 +101,9 @@ window.onload = function () {
             // Se utiliza un metodo deprecado, metodo transform no funciono segun lo esperado
             mapa.rotate(-90,mx,my);
             mapa.translate(30,260);
-            
-            // set de colores para localidades 
-            colorLocalidad = {}
-            colorLocalidad.none = "#3b3b3b"
-            colorLocalidad.chapinero = "#EDF108"
-            colorLocalidad.teusaquillo = "#3f5d4d"
-            colorLocalidad.santafe = "#4f5d6a"
-            colorLocalidad.losmartires = "#f4f3f2"
-            colorLocalidad.lacandelaria = "#323232"
-            colorLocalidad.ciudadbolivar = "#4a4a4a"
-            colorLocalidad.bosa = "#1f1f1f"
 
+            // TODO: set de iconos para ejes
+            
             /** 
              * setLocalidadColor
              *
