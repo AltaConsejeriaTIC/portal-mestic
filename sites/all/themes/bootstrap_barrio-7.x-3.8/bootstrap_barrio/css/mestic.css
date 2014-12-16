@@ -1,0 +1,526 @@
+.eje a, 
+.eje a:hover, 
+.eje a:focus{
+	color:#fff;
+	text-decoration: none;
+}
+
+.block-title{
+	background:#ffc167;
+    	color: #DE5766;
+    	line-height: 40px;
+	padding-left: 40px;
+	font-size: 1.7em;
+}
+/*.block h1, .block h2, .block h3, .block h4, .block h5, .block h6 {
+    	background:#ffc167;
+    	color: #DE5766;
+    	line-height: 40px;
+	padding-left: 40px;
+}*/
+h2, .h2 {
+    font-size: 20px;
+}
+.view-galeria-de-imagenes img{
+    	 height: 135px;
+}
+div.view-ultimas-noticias div.view-content table.views-view-grid tr td {
+	background-color: #eee;
+    	height: 335px;
+   	padding: 10px;
+	vertical-align: top;
+    	width: 50%;
+}
+.pagination li a{
+	background-color: #56bba9;
+    	border: o;
+    	float: left;
+    	line-height: 1.42857;
+    	margin-left: -1px;
+    	padding: 2px 10px;
+    	position: relative;
+    	text-decoration: none;
+	color:#fff;
+}
+.pagination li a:hover{
+	background-color: #de5766;
+    	border: o;
+    	float: left;
+    	line-height: 1.42857;
+    	margin-left: -1px;
+    	padding: 2px 10px;
+    	position: relative;
+    	text-decoration: none;
+	color:#fff;
+}
+.pagination li span{
+	display: none;
+}
+.pagination{
+	border-radius: 0;
+    	display: inline-block;
+    	margin: 0;
+    	padding-left: 0;
+}
+
+
+
+
+/*--------IDS------------------*/
+#block-block-20{
+	 margin-top: 10px;
+}
+#DOMWindow{
+	background-color: #000;
+	background-repeat: no-repeat;
+	border: 0px;
+	left: 413px;
+	overflow: auto;
+	padding: 0;
+	position: absolute;
+	top: 460px;
+	z-index: 10001;
+}
+#f{
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte19.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-size: 34px 31px;	
+}
+ul.nav-tabs li.active a span#f:hover,
+ul.nav-tabs li.active a span#f{
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte18.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-size: 34px 31px;
+}
+
+
+
+#fondo-encabezado{
+	background-color:#3d1e4d;
+	color:#fff;	
+}
+#fondo-menu{
+	background-color:#3d1e4d;
+}
+#fr{
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte25.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-size: 34px 31px;	
+}
+ul.nav-tabs li.active a span#fr:hover, 
+ul.nav-tabs li.active a span#fr{
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte24.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-size: 34px 31px;
+}
+#main-nav a{
+	color:#56bba9;
+}
+
+#menu-principal{
+	background-color:#332838;
+}
+#slideshow_container{
+	margin-top: -20px;
+	padding:0;
+	
+}
+#search-block-form{
+	margin-bottom: 6px;
+	 height: 40px;
+}
+#t{
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte21.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-size: 34px 31px;	
+}
+ul.nav-tabs li.active a span#t:hover,
+ul.nav-tabs li.active a span#t{
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte20.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-size: 34px 31px;
+}
+#y{
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte23.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-size: 34px 31px;	
+}
+ul.nav-tabs li.active a span#y:hover,
+ul.nav-tabs li.active a span#y{
+	background:url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/parte22.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-size: 34px 31px;
+}
+.front .main-container {
+    padding: 15px 0;
+}
+
+
+
+/*-----------------CLASES------------------*/
+.bloque-gale {
+    padding-left: 4px;
+    padding-right: 4px
+}
+.text-center{
+    text-align: center;
+    padding: 10px;
+}
+.eje {
+    	background: none repeat scroll 0 0 #de5766;
+   	color: #fff;
+    	font-weight: bold;
+    	height: 83px;
+    	line-height: 80px;
+	padding:0 15px;
+    	text-align: center;
+}
+.eje:hover{
+    	background: none repeat scroll 0 0 #ffc167;
+   	color: #fff;
+    	font-weight: bold;
+    	height:83px;
+    	line-height: 69%
+	padding:0 15px;
+    	text-align: center;
+}
+
+footer.footer { 
+	background: url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/footer_f.png") repeat-x;
+	background-size: 1154px 200px;
+	background-position:bottom;
+	height:300px;
+	margin: 0;
+}
+
+#block-block-15 div div ul.nav-tabs ,
+#block-block-20 div div ul.nav-tabs {
+    	background-color: #56bba9;
+    	margin-bottom: 10px;
+}
+.jcarousel-skin-default .jcarousel-container-horizontal{
+	width:100%;
+	padding: 17px 40px;
+}
+
+
+.navbar.container{
+	margin-top: 0px;
+}
+.navbar-default{
+	background-color:#3d1e4d;
+	border-color:#3d1e4d;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	color: #56BBA9;
+	background-color:#3d1e4d ;
+}
+.navbar #main-nav li a {
+	line-height: 30px;
+	height: 34px;
+	padding: 0 15px;
+	margin: 5px;
+}
+/*.navbar #main-nav li a.active {
+	background: none repeat scroll 0 0 #ffc167;
+	line-height: 30px;
+	height: 34px;
+	padding: 0 15px;
+	margin: 5px;
+	color:#fff;
+}*/
+
+
+.navbar #main-nav li a:hover, .navbar #main-nav li:hover a {
+	background: #ffc167;
+	color:#fff;
+}
+/*.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+	background-color: rgba(255,255,255, 0.0);
+        border-color: #56bba9 #56bba9 transparent;
+}*/
+.nav-tabs  li  a.button-container,
+.nav-tabs  li  a.button-container:hover, 
+.nav-tabs  li  a.button-container:focus{
+	background-color: rgba(255,255,255, 0.0);
+        border-color: #56bba9 #56bba9 transparent;
+	padding:0;
+	margin: 0 23px;
+}
+
+.nav-tabs  li  a.button-container  span.rs {
+	display: block;
+  	height:40px;
+	width:40px;	
+}
+
+.panoramico{
+  	background: url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/panoramica.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-size: 100% 100%;
+    	height: 420px;
+    	margin: 0;
+    	position: relative;
+}
+
+.panel-lateral{
+	display: block;
+    	float: left;
+   	height: 83px;
+    	/*width: 235px;*/
+}
+
+.views-content-counter{
+	visibility: hidden;
+}
+.view-slideshow{
+	position: relative;
+}
+.views_slideshow_cycle_main {
+	width: 100%;
+}
+.views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
+	width: 100% !important;
+}
+.views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
+	width: 100% !important;
+}
+.views_slideshow_cycle_main .field-content {
+	max-width: 100%;
+	width: 100%;
+}
+/* Center the image */
+.views_slideshow_cycle_main .field-content img {
+	display:block;
+	margin:auto;   /*Center the image*/
+	max-width: 100%;
+	width: 100%;
+	/*border: 1px double #605D5A;
+	border-radius: 5px;*/
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.views-slideshow-controls-bottom {
+	bottom: 0;
+	margin:auto;  /*Center the control bottom*/
+	position: absolute;
+    	right: 0;
+  	text-align:right;
+	width:90%;
+	z-index: 100;
+}
+.views-slideshow-controls-bottom .views-slideshow-pager-field-item {
+  	display: inline-block;
+  	height: 15px;
+ 	margin: 0 5px;
+  	padding: 3px;
+  	background: #dc5564;
+  	width: 15px; /* The width of container block must 30px */
+
+}
+.views-slideshow-controls-bottom .views-slideshow-pager-field-item img {
+  	width: 30px; /* The width of container block must 30px */
+  	height:20px;
+}
+.views-slideshow-controls-bottom .views-slideshow-pager-field-item.active,
+.views-slideshow-controls-bottom .views-slideshow-pager-field-item:hover {
+  	background:#ffc167;
+}
+.view-galeria-de-imagenes div.view-content table.views-view-grid{
+	margin-top: -10px;
+	margin-left: -11px;
+}
+.view-video-2 div.view-content table.views-view-grid{
+	border-collapse: collapse;
+	margin-left: -2px;
+}
+table.views-view-grid {
+	border-collapse: separate;
+	
+	border-spacing: 10px; 
+      /*  border:1px #fff solid;  */
+}
+.views-row .views-field-field-imagen img{
+	float: left;
+     	margin-right:20px;	
+}
+.views-row .views-field-body{
+	height: 200px;
+}
+.view-blog-noticias .views-row{
+	background-color: #EEE;
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.views-field-field-imagen{
+	/*float: left;
+     	width: 80px;*/
+ 	text-align: center;
+}
+/*.views-field-body-1,*/
+.views-field-view-node-1{
+	float: right;
+    	margin-bottom: 5px;
+    	width: 80px;
+}
+.views-field-view-node-1 span:hover,
+.views-field-view-node span:hover,
+.views-field-view-node-1 span:focus,
+.views-field-view-node span:focus{
+	background: url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/Sin título-1.gif") no-repeat scroll right center rgba(0, 0, 0, 0);
+    	bottom: 5px;
+    	display: block;
+    	float: right;
+    	position: absolute;
+    	right: 10px;
+    	width: 75px;
+}
+
+.views-field-view-node-1 span,
+.views-field-view-node span{
+	 background: url("/sites/all/themes/bootstrap_barrio-7.x-3.8/bootstrap_barrio/imagenes/Sin%20titulo%202.gif") no-repeat scroll right center rgba(0, 0, 0, 0);
+    	bottom: 5px;
+    	display: block;
+    	float: right;
+    	position: absolute;
+    	right: 10px;
+	width:75px;					
+}
+.views-field-view-node-1 span a:hover,
+.views-field-view-node-1 span a:focus,
+.views-field-view-node span a:hover,
+.views-field-view-node span a:focus{
+	color:#de5766;
+	font-weight: bold;
+ 	text-decoration: none;
+}
+.views-field-view-node-1 span a,
+.views-field-view-node span a
+{
+	color:#3d1e4d;
+	font-weight: bold;
+ 	text-decoration: none;
+}
+.views-field-title span a:hover,
+.views-field-title span a:focus{
+   	color: #de5766;
+     	font-size: 20px;
+ 	font-style: italic;
+   	font-weight:bold;
+	text-decoration:none;
+}
+.views-field-title span a{
+   	color: #3d1e4d;
+     	font-size: 20px;
+ 	font-style: italic;
+   	font-weight:bold;
+	text-decoration:none;
+}
+
+.jcarousel-skin-default .jcarousel-item {
+    background: none repeat scroll 0 0 #fff;
+    border: none;
+    height: 100px;
+    list-style: none outside none;
+    overflow: hidden;
+    padding: 0;
+    width: 100px;
+}
+.jcarousel-skin-default .jcarousel-next-horizontal,
+.jcarousel-skin-default .jcarousel-prev-horizontal{
+	top:30px;
+}
+.field-name-field-imagen {
+	margin-bottom: 20px;
+}
+
+#pie-institucional {
+	background-color: #3d1e4d;
+    	color: #fff;
+    	font-weight: bold;
+}
+#block-block-15{
+	 margin-top: 30px;
+}
+#block-views-calendar-block-1{
+	 margin-top: 10px;
+}
+.field-content{
+	margin-top: 10px;
+}
+#block-views-calendar-block-3{
+	 	margin:30px 0;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    	font-size: 30px;
+    	font-style: italic;
+    	color: #3d1e4d;
+    	padding: 0;
+   /* text-shadow: -1px -1px 0px #101010, 1px 1px 0px #3d1e4d;*/
+   	font-weight:bold;
+  }
+#block-search-form{
+	height: 60px;
+}
+
+/*------- Mapa interactivo de Bogotá--------*/
+.mapa-container-bg {
+    background-color: #3D1E4D;
+}
+
+#mapa-bogota-actividades {
+    color: #FFFFFF;
+    height: 375px;
+    overflow-y: scroll;
+}
+
+#mapa-bogota-actividades h5 {
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+#mapa-bogota-actividades p, 
+#mapa-bogota-actividades li, 
+#mapa-bogota-actividades em 
+{
+    color: #FFFFFF;
+    font-size: 11px;
+    line-height: 1.2em;
+}
+
+#mapa-bogota-actividades img {
+    float: left;
+    margin: 3px 3px 3px 0;
+    height: auto;
+    width: 100px;
+}
+
+#mapa-bogota-actividades .eje {
+    height: auto;
+    background: none;
+    line-height: 1em;
+    text-align: left;
+    padding: 3px;
+}
+
+/*-------------- eje noticias --------------*/
+.eje-noticia{
+	padding-top:15px;
+	padding-bottom: 25px;
+}
+.blo-noticia{
+	height: 350px;
+	border: 5px solid #fff;
+	background-color: #e9e9e9;
+}
+
+/* ------------- Media query -------------- */
+
+@media screen and (max-width: 700px){
+
+	.panel-lateral{
+
+		font-size:9px;
+
+	}
+
+	.mapa-container-bg{
+
+		display:none;
+
+	}
+
+}
